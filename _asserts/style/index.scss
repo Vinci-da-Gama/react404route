@@ -1,0 +1,50 @@
+/* you should import component from bootstrap
+if you import bootstrap to scss, you need compile, 
+since we use webpack, we can import bootstrap component to part.js file,
+then use loaders to fetch it. */
+@import "./_bsCom/bsVariableMixins";
+// @import "../../node_modules/bootstrap/scss/_breadcrumb.scss";
+/* by using webpack, it split css for each page. */
+@import "./_general/mixins.scss";
+@import "./_general/variables.scss";
+@import "./cssSpinner.scss";
+
+body.basictorso
+{
+	@include extendFlex($zp);
+	@include fontSmooth();
+}
+
+.minheight-100px {
+	min-height: 100px;
+}
+
+.maxheight-500px {
+	max-height: 500px;
+}
+
+.form-control {
+	font-size: 1em;
+}
+
+.fwb-fz1m {
+	font-weight: bold;
+	font-size: 2em;
+}
+
+.fz2em {
+	font-size: 2em;
+}
+
+.mt1em {
+	margin-top: 1em;
+}
+
+footer.navbar-fixed-bottom {
+	background-color: $bgColor;
+	div.col-md-6 {
+		text-align: center;
+	}
+}
+
+@import "./_general/mq.scss";

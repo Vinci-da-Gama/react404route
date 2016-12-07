@@ -1,0 +1,67 @@
+@mixin fontSmooth() {
+	@each $vender in $venderList {
+		#{$vender}font-smoothing: antialiased;
+	}
+	text-rendering: optimizelegibility;
+}
+
+@mixin bg($bgColor, $bgAisle, $bgVertical, $bgHorizontal, $bgRepeat, $bgSize) {
+	background: $bgColor url($bgAisle) $bgVertical $bgHorizontal $bgRepeat;
+	background-size: $bgSize;
+}
+
+@mixin whRelease() {
+	width: 100%;
+	height: auto;
+	outline: none;
+}
+
+@mixin whp($wip, $heip) {
+	width: $wip;
+	height: $heip;
+}
+
+@mixin mp() {
+	margin: 0 auto;
+	padding: 0;
+}
+
+@mixin extendFlex($zeroPixel) {
+	width: 100%;
+	height: auto;
+	padding: $zeroPixel;
+	margin: $zeroPixel auto;
+	outline: none;
+}
+
+@mixin responsiveTableComponent() {
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+
+	th { display: none; }
+	
+	tr { border: 1px solid #ccc; }
+	
+	td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 60%; 
+	}
+	
+	td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+	}
+}

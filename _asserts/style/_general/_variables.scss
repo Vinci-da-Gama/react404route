@@ -1,0 +1,13 @@
+$zp:0px;
+$bgColor: rgba(0, 120, 254, .99);
+
+$bgAisle:"../../_dist/_minImgs/flags.jpg";
+$bgVertical: top;
+$bgHorizontal: center;
+$bgRepeat: no-repeat;
+$bgSize: cover;
+$bgBlue: rgba(20, 120, 200, .99);
+/* vender prefix */
+$venderList: "-webkit-", "-moz-", "-ms-", "-o-", "";
+
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
